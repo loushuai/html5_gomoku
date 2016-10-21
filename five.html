@@ -1,0 +1,25 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<head>
+	<title>五子棋 Developed by LouShuai</title>	
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+
+<body bgcolor = "0xBDB76B">
+	<center>
+	<div id="container" style="border:0px solid; width:640px; height:640px">
+        <canvas id="canvas" width="640" height="640" ></canvas>
+    </div>
+	
+	<script type="text/javascript" src="arraylist.js"></script>
+	<script type="text/javascript" src="board.js"></script>
+	<script type="text/javascript" src="ai.js"></script>
+	<script type="text/javascript" src="five.js"></script>
+	
+	<input type="radio" name="color" value="0">黑棋
+	<input type="radio" name="color" value="1">白棋
+	<input type="button" name="button_start" value="开始" onclick="newGame()">
+	</center>
+</body>
