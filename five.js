@@ -5,7 +5,7 @@ var blockSize = 40;
 var boardSize = 15;
 var canvasX;
 var canvasY;
-var firstGo = pieceComp;//pieceHuman; //ÈËºÚÆå
+var firstGo = pieceComp;//pieceHuman; //äººé»‘æ£‹
 var turn;
 
 //Wait for DOM to load and init game
@@ -52,7 +52,7 @@ function newGame() {
 	else if (colorRadio[1].checked == true)
 		firstGo = pieceComp;
 	else {
-		alert("ÇëÑ¡ÔñÆå×Ó");
+		alert("Please Choose Your Color");
 		return;
 	}
 	
@@ -121,18 +121,18 @@ function drawBoard() {
 	ctx.stroke();
 	
 	
-	//»­Æå×Ó
+	//ç”»æ£‹å­
 	for (i = 0; i < boardSize; i++) {
 		for (j = 0; j < boardSize; j++) {
 			if (board.board[i][j] == pieceHuman) {
 				if (firstGo == pieceHuman) 
-					drawPiece(i, j, 0);//ºÚ
+					drawPiece(i, j, 0);//é»‘
 				else
 					drawPiece(i, j, 1);
 			}
 			else if (board.board[i][j] == pieceComp) {
 				if (firstGo == pieceHuman) 
-					drawPiece(i, j, 1);//°×
+					drawPiece(i, j, 1);//ç™½
 				else
 					drawPiece(i, j, 0);
 			}
@@ -172,7 +172,7 @@ function drawPiece(i, j, val) {
 
 function play(bd) {
 	if (immediateHumanWin(bd) == 1) {
-		alert("ÄãÓ®ÁË£¡");
+		alert("You Win!");
 		return;
 	}
 	getCompInput(bd);
@@ -181,7 +181,7 @@ function play(bd) {
 	turn = pieceHuman;
 	
 	if (immediateCompWin(bd) == 1) {
-		alert("ÄãÊäÁË£¡");
+		alert("You Lose!");
 		return;
 	}
 }
